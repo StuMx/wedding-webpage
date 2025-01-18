@@ -1,0 +1,623 @@
+@font-face {
+    font-family: 'alta';
+    src: url('./assets/font/Alta_regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'ttdrugs';
+    src: url('./assets/font/TT-Drugs-Regular.woff') format('woff');
+}
+
+.material-symbols-outlined {
+    font-size:50pt !important;
+}
+
+html { 
+    /* scroll-snap-type: y proximity; */
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "ttdrugs", sans-serif;
+    font-size: 16pt;
+    scroll-behavior: smooth;
+    background-color: #fff9f2;
+    color: #5c6244
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: #d8dfbe;
+    text-align: right;
+    font-family: 'alta';
+    font-size: 7vw;
+    box-shadow: #5e634b -2px -1px 12px 0px;
+    transition: background-color 0.5s;
+    width: 80vw;
+}
+
+#menu_button {
+    cursor: pointer;
+}
+
+nav.hidden {
+    background: transparent;
+    box-shadow: none;
+    transition: background 0.5s;
+}
+
+nav  ul.hidden{
+    margin-left: 100vw;
+    transition: margin-left 0.5s;
+}
+
+nav  ul.removed{
+    display: hidden;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+    padding-right: 1em;
+    width: 80%;
+    transition: margin-left 0.5s;
+}
+
+nav ul li {
+    /* display: inline-block; */
+    margin-bottom: 0.3em;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    padding: 2em;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    margin-top: 2em;
+}
+
+section+section::before {
+    /* content: "";
+    background-image: url(./assets/img/spacer.png);
+    background-position: center;
+    display: block;
+    height: 90px;
+    position: relative;
+    top: -38px; */
+    
+}
+
+.spacer {
+    height: 2em;
+    background-image: url(./assets/img/spacer.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sign {
+    text-align: right;
+    font-size: x-large;
+}
+
+#landing {
+    display: block;
+    
+    height: 90vh;
+}
+
+h1 {
+    margin: 0;
+    font-size: 7em;
+    font-family: "alta", serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+#landing h2 {
+    font-size: 3em;
+    font-family: "Imperial Script", serif;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+#landing_container {
+    background-image: url(./assets/img/land_bg_0.png);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+#landing_confirmacion {
+    background: #5c6244;
+    border-radius: 2em;
+    padding: 1em 2em;
+    color: #fff9f2;
+    /* position: fixed; */
+}
+
+#invitation {
+    background: #d8dfbe;
+}
+
+#invitation h1{
+    font-family: "alta", serif;
+    font-size: 3em;
+}
+
+#invitation_textcontainer {
+    display: flex;
+}
+
+#invitation_textcontainer > div {
+    width: 50%;
+}
+
+@media (orientation: landscape) {
+    #invitation_textcontainer {
+        flex-direction: row;
+    }
+
+    #invitation_textcontainer > div {
+        width: 50%;
+    }
+}
+
+@media (orientation: portrait) {
+    #invitation_textcontainer {
+        flex-direction: column;
+    }
+
+    #invitation_textcontainer > div {
+        width: 100%; 
+    }
+}
+
+#invitation_image {
+    width: calc(100% - 0.5em);
+    height: 300px;
+    margin: 0 auto;
+    background: url(./assets/img/land_bg_0.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#details {
+    background: url(./assets/img/details_bg_0.png);
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+#details_head {
+    text-align: center;
+}
+
+#details_head h1 {
+    font-size: 3em;
+}
+
+#details_content {
+    display: flex;
+    text-align: center;
+}
+
+#details_content > div {
+    width: 33%;
+    /* height: 200px; */
+}
+
+@media (orientation: portrait) {
+    #details_content {
+        flex-direction:column;
+    }
+    #details_content > div {
+        width: 100%;
+    }
+}
+
+#details_footer {
+    font-family: "Imperial Script", serif;
+    text-align: center;
+    font-size: 2em;
+    margin: 1em 0;
+}
+
+#arriving {    
+    background-size:coger;
+    background-position:center;
+}
+
+#arriving_head {
+    background: url(./assets/img/head_bg_0.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 1em;
+}
+
+#arriving_head h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+#arriving_content {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#arriving_content h2{
+    font-size: 1em;
+}
+
+#arriving_content > div {
+    width: 40%;
+    /* height: 200px; */
+}
+
+@media (orientation: portrait) {
+    #arriving_content {
+        flex-direction:column;
+    }
+    #arriving_content > div {
+        width: 100%;
+        margin: 1em 0;
+    }
+}
+
+#arriving_footer {
+    font-family: "Imperial Script", serif;
+    text-align: center;
+    font-size: 2em;
+}
+
+#lodging {
+    background-position:center;
+}
+
+#lodging_head {
+    background-position: top;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 1em;
+}
+
+#lodging_head h1 {
+    font-size: 2.5em;
+    margin: 0;
+    /* text-align: center; */
+}
+
+#lodging_content {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+#lodging_content h2 {
+    margin: 0;
+    font-size: medium;
+}
+
+#lodging_content h3 {
+    margin: 0;
+    font-size: larger;
+}
+
+#lodging_content > div {
+    width: 50%;
+    background: url(./assets/img/lodging_bg_0.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0em;
+    height: 45vw;
+}
+
+@media (orientation: portrait) {
+    #lodging_content {
+        flex-direction:column;
+    }
+    #lodging_content > div {
+        width: 90%;
+        /* margin: 1em 0; */
+        padding: 10%;
+        margin: -5%;
+        height: 100vw;
+    }
+}
+
+#lodging_footer {
+    font-family: "Imperial Script", serif;
+    text-align: center;
+    font-size: 2em;
+}
+
+#timeline {
+    background: #d8dfbe;
+}
+
+#timeline_wrap {
+    background:#fff9f2;
+    padding: 2em 3px;
+}
+
+#timeline_head h1{
+    font-size: 10vw;
+    margin: 0 0 1em;
+}
+
+#timeline_content {
+    display: flex;
+    font-size: 10pt;
+    margin: 2em 0 0 -12vw;
+    width: 99%;
+    /* padding: 4em; */
+}
+
+#timeline_content h3{
+    font-size: 12pt;
+    margin: 0;
+}
+
+#timeline_content p {
+    margin: 0;
+}
+
+#timeline_left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#timeline_right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#timeline_right > div {
+    display: inline-flex;
+}
+
+#timeline .material-symbols-outlined {
+    font-size: 30pt !important;
+}
+
+.dot {
+    background-color: #779d6f;
+    width: 4em;
+    height: 4em;
+    border-radius: 2em;
+}
+
+.line {
+    background-color: #779d6f;
+    width: 0.5em;
+    height: 4em;
+    margin: -2px calc(2em - 0.25em);
+}
+
+@media (orientation: landscape) {
+    #timeline_content {
+        display: flex;
+        flex-direction: column;
+        font-size: 10pt;
+        margin: 0;
+        width: 99%;
+    }
+
+    #timeline_left {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    #timeline_right {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    #timeline_right > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 120px;
+    }
+
+    .line {
+        background-color: #779d6f;
+        width: 10em;
+        height: 1em;
+        margin: calc(2em - 0.5em) -2px;
+    }
+}
+
+
+
+
+
+#kids {    
+    background-size:coger;
+    background-position:center;
+}
+
+#kids_head {
+    background: url(./assets/img/head_bg_0.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 1em;
+}
+
+#kids_head h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+#kids_content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+
+#kids_content > div {
+    width: 45%;
+    min-height: 300px;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+
+@media (orientation: portrait) {
+    #kids_content {
+        flex-direction:column;
+    }
+    #kids_content > div {
+        width: 100%;
+    }
+}
+
+#kids_footer {
+    font-family: "Imperial Script", serif;
+    text-align: center;
+    font-size: 2em;
+}
+
+#gifts {
+    display: flex;
+    flex-direction: row;
+    background: #d8dfbe;
+}
+
+#gifts h1 {
+    font-size: 3em;
+}
+
+#gifts_left {
+    width: 60%;
+}
+
+#gifts_right {
+    width: 40%;
+}
+
+@media (orientation: portrait) {
+    #gifts {
+        flex-direction:column;
+    }
+    #gifts > div {
+        width: 100%;
+    }
+
+#gifts_left h1 {
+    text-align: left;
+    font-size: 2em;
+}
+}
+
+#gifts_image {
+    background: url(./assets/img/land_bg_0.jpg);
+    height: 300px;
+    background-size: cover;
+}
+
+#rsvp {
+    background: url(./assets/img/details_bg_0.png);
+    background-size:coger;
+    background-position:center;
+}
+
+#rsvp_head {
+    text-align: center;
+}
+
+#rsvp_head h1 {
+    font-size: 3em;
+}
+
+#rsvp_content {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#rsvp_footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#rsvp_content > div {
+    width: 33%;
+    height: 200px;
+}
+
+#thanks {
+    background: #d8dfbe;
+}
+
+#thanks h1 {
+    font-size: 3em;
+}
+
+#thanks_content {
+    display: flex;
+}
+
+#thanks_left {
+    width: 50%;
+}
+
+#thanks_right {
+    width: 50%;
+}
+
+@media (orientation: portrait) {
+    #thanks_content {
+        flex-direction:column;
+    }
+    #thanks_content > div {
+        width: 100%;
+    }
+}
+
+#thanks_image {
+    background: url(./assets/img/land_bg_0.jpg);
+    height: 300px;
+    background-size: cover;
+}
+
+
