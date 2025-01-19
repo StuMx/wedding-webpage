@@ -12,9 +12,10 @@
     font-size: 36px !important;
 }
 
-html { 
+html {
     /* scroll-snap-type: y proximity; */
     scroll-behavior: smooth;
+    width: 100vw;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
     font-size: 16pt;
     scroll-behavior: smooth;
     background-color: #fff9f2;
+    width: 100%;
     color: #5c6244
 }
 
@@ -122,14 +124,15 @@ section+section::before {
 
 h1 {
     margin: 0;
-    font-size: 7em;
+    font-size: 25vw;
     font-family: "alta", serif;
     font-weight: normal;
     text-align: center;
+    overflow: auto;
 }
 
 #landing h2 {
-    font-size: 3em;
+    font-size: 15vw;
     font-family: "Imperial Script", serif;
     font-weight: normal;
     margin-top: 0;
@@ -168,7 +171,7 @@ h1 {
 
 #invitation h1{
     font-family: "alta", serif;
-    font-size: 3em;
+    font-size: 11vw;
 }
 
 #invitation_textcontainer {
@@ -219,7 +222,7 @@ h1 {
 }
 
 #details_head h1 {
-    font-size: 3em;
+    font-size: 11vw;
 }
 
 #details_content {
@@ -309,7 +312,7 @@ h1 {
 }
 
 #lodging_head h1 {
-    font-size: 2.5em;
+    font-size: 10vw;
     margin: 0;
     /* text-align: center; */
 }
@@ -617,7 +620,7 @@ h1 {
 }
 
 #thanks h1 {
-    font-size: 3em;
+    font-size: 10vw;
 }
 
 #thanks_content {
