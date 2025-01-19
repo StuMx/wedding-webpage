@@ -9,7 +9,7 @@
 }
 
 .material-symbols-outlined {
-    font-size:50pt !important;
+    font-size: 36px !important;
 }
 
 html { 
@@ -44,10 +44,15 @@ nav {
     cursor: pointer;
 }
 
+#menu_list.removed {
+    display: none;
+}
+
 nav.hidden {
     background: transparent;
     box-shadow: none;
     transition: background 0.5s;
+    height: auto;
 }
 
 nav  ul.hidden{
@@ -82,6 +87,7 @@ section {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     margin-top: 2em;
+    min-height: 70vh;
 }
 
 section+section::before {
@@ -439,11 +445,12 @@ h1 {
     }
     
     #timeline_right {
-        width: 100%;
+        width: 900px;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: space-around;
+        margin: 0 auto;
     }
 
     #timeline_right > div {
@@ -480,7 +487,7 @@ h1 {
 }
 
 #kids_head h1 {
-    font-size: 3em;
+    font-size: 7vw;
     margin: 0;
 }
 
@@ -556,7 +563,7 @@ h1 {
 
 #rsvp {
     background: url(./assets/img/details_bg_0.png);
-    background-size:coger;
+    background-size: cover;
     background-position:center;
 }
 
@@ -565,7 +572,7 @@ h1 {
 }
 
 #rsvp_head h1 {
-    font-size: 3em;
+    font-size: 10vw;
 }
 
 #rsvp_content {
@@ -575,14 +582,14 @@ h1 {
 }
 
 #rsvp_footer {
-    display: flex;
     text-align: center;
     justify-content: center;
+    font-family: "Imperial Script", serif;
+    font-size: 2em;
 }
 
 #rsvp_content > div {
-    width: 33%;
-    height: 200px;
+    min-height: 200px;
 }
 
 #thanks {

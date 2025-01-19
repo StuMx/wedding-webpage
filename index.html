@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Monsieur+La+Doulaise&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=airport_shuttle,bedroom_baby,calendar_month,directions_bus,directions_car,help,location_city,menu,pin_drop,question_mark,styler" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=airport_shuttle,bedroom_baby,brunch_dining,calendar_month,candle,directions_bus,directions_car,emoji_people,help,location_city,menu,pin_drop,question_mark,styler,wine_bar" />
     
 </head>
 <body>
     <nav class="hidden">
         <div id="menu_button"><span class="material-symbols-outlined">menu</span></div>
-        <div>
+        <div id="menu_list" class="removed">
             <ul class="removed hidden">
                 <li>
                     <a href="#landing">Home</a>
@@ -50,7 +50,7 @@
         <div id="landing_container">
             <div><h1>Benji y Diana</h1></div>
             <div><h2>¡Nos casamos!</h2></div>
-            <div id="landing_confirmacion">Confirmación</div>
+            <div id="landing_confirmacion" class="rsvp_button">Confirmar asistencia</div>
         </div>
     </section>
     <section id="invitation">
@@ -102,7 +102,7 @@
                 <p>Toma la autopista México - Puebla </p>
             </div>
         </div>
-        <div id="arriving_footer">
+        <div id="arriving_footer" class="contact_us">
             <span class="material-symbols-outlined">question_mark</span><br />
             ¿Dudas? Contáctanos 
         </div>
@@ -113,19 +113,24 @@
         <div id="lodging_content">
             <div>
                 <h2>HOTEL SEDE</h2>
-                <h3>Hilton Angelopolis</h3>
+                <h3>Hilton Angelopolis</h3><br />
                 <span class="material-symbols-outlined">location_city</span>
-                <p>Código Reservación: Habitación estándar 2pax $1590 (desayuno buffet incluido)</p>
+                <p>
+                    Habitación estándar 2pax 
+                    <b>$1590*</b><br />
+                    <small>*desayuno buffet incluido</small><br />
+                    Código Reservación: <br>
+                    XXXX
+                </p>
             </div>
             <div>
                 <h2>TRANSPORTE</h2>
-                <span class="material-symbols-outlined">airport_shuttle</span>
-                <h3>Salida : Hilton Angelopolis</h3>
+                <h3>Salida : Hilton Angelopolis</h3><br />
+                <span class="material-symbols-outlined">airport_shuttle</span>                
                 <p>Habrá transporte sin costo extra que los traslade a la hacienda de ida y regreso</p>
             </div>
         </div>
     </section>
-    <div class="spacer"></div>
     <section id="timeline">
         <div id="timeline_wrap">
             <div id="timeline_head"><h1>Cronograma</h1></div>
@@ -143,35 +148,35 @@
                 </div>
                 <div id="timeline_right">
                     <div>
-                        <span class="material-symbols-outlined">styler</span>
+                        <span class="material-symbols-outlined">emoji_people</span>
                         <div>
                             <h3>BIENVENIDA</h3>
                             <p>Cena de bienvenida Viernes 8:00 pm</p>
                         </div>
                     </div>
                     <div>
-                        <span class="material-symbols-outlined">styler</span>
+                        <span class="material-symbols-outlined">airport_shuttle</span>
                         <div>
                             <h3>TRANSPORTE</h3>
                             <p>Hotel a la Hacienda Sábado 1:45 pm</p>
                         </div>
                     </div>
                     <div>
-                        <span class="material-symbols-outlined">styler</span>
+                        <span class="material-symbols-outlined">candle</span>
                         <div>
                             <h3>CEREMONIA</h3>
                             <p>Sábado 3:00 pm</p>
                         </div>
                     </div>
                     <div>
-                        <span class="material-symbols-outlined">styler</span>
+                        <span class="material-symbols-outlined">wine_bar</span>
                         <div>
                             <h3>COCTEL </h3>
                             <p>Sábado 4:00 pm</p>
                         </div>
                     </div>
                     <div>
-                        <span class="material-symbols-outlined">styler</span>
+                        <span class="material-symbols-outlined">brunch_dining</span>
                         <div>
                             <h3>BANQUETE 
                             </h3>
@@ -188,10 +193,10 @@
             <div>
                 <span class="material-symbols-outlined">bedroom_baby</span>
                 <h2>Niños menores a 10 años</h2>
-                <p>Habrá un servicio de niñeras dentro de la hacienda con costo extra. Mándanos un mensaje y platicamos. </p>
+                <p>Queremos celebrar nuestro amor contigo. Si planeas asistir con tus hijos, ponemos a tu disposición un servicio de niñera profesional para que disfrutes al máximo de la fiesta. Este servicio tiene un costo adicional. </p>
             </div>            
         </div>
-        <div id="kids_footer">
+        <div id="kids_footer" class="contact_us">
             <span class="material-symbols-outlined">question_mark</span><br />
              ¿Dudas? Contáctanos 
         </div>
@@ -199,27 +204,38 @@
     <section id="gifts">
         <div id="gifts_left">
             <h1>¿Regalos?</h1>
-            <p>Con gusto recibiremos lo que quieran llevarnos, también podrán realizarse transferencias bancarias a esta cuenta:</p>
+            <p>Su compañía es el mejor regalo que podemos recibir. Sin embargo, si desean brindarnos un detalle, aceptamos con cariño cualquier muestra de afecto, incluyendo transferencias bancarias a la cuenta.</p>
+            <p>
+                <b>Banco:</b> BBVA <br>
+                <b>Número:</b> XXXXXX <br>
+                <b>CLABE:</b> XXXXXX
+            </p>
         </div>
         <div id="gifts_right">
             <div id="gifts_image"></div>            
         </div>
     </section>
-    <!-- <section id="rsvp">
+    <section id="rsvp">
         <div id="rsvp_head"><h1>Confirmación</h1></div>
         <div id="rsvp_content">
             <div>
-                <p>Les agradecemos que puedan confirmarnos a la brevedad.</p>
+                <p>Para que podamos celebrar contigo este día tan especial, te pedimos que <b>confirmes tu asistencia antes del 15 de febrero</b> con nuestra Wedding Planner haciendo click en el siguiente botón.</p>
+                <div id="landing_confirmacion" class="rsvp_button">Confirma tu asistencia</div>
             </div>            
         </div>
-        <div id="rsvp_footer">¿Dudas? Contáctanos </div>
-    </section> -->
+        <div id="rsvp_footer" class="contact_us">
+            <!-- <span class="material-symbols-outlined">question_mark</span><br /> -->
+             <br />
+            ¿Dudas? Contáctanos 
+        </div>
+    </section>
+    <div class="spacer"></div>
     <section id="thanks">
         <div id="thanks_content">
             <div id="thanks_left"><h1>Los Esperamos</h1></div>
             <div id="thanks_right">
                 <p>Estamos ansiosos de verlos ese día y celebrar en grande.  Sólo ayúdennos a confirmar lo más pronto posible.</p>
-                <p>Con amor Benji y Diana</p>
+                <p class="sign">Con amor Benji y Diana</p>
             </div>
         </div>
         <div id="thanks_image"></div>
@@ -229,8 +245,9 @@
     document.querySelector("#menu_button").onclick = () => {
         if(document.querySelector("nav ul").classList.contains("hidden")) {
             document.querySelector("nav ul").classList.remove("hidden");
-            document.querySelector("nav ul").classList.remove("removed");
+            document.querySelector("#menu_list").classList.remove("removed");
             document.querySelector("nav").classList.remove("hidden");
+            document.querySelector("nav").classList.remove("removed");
         } else {
             document.querySelector("nav ul").classList.add("hidden");
             document.querySelector("nav").classList.add("hidden");
@@ -244,8 +261,20 @@
         }
     });
 
-    document.querySelectorAll("nav ul").forEach(anchor => {
+    document.querySelectorAll("nav").forEach(anchor => {
         anchor.ontransitionend = () => { anchor.classList.add("removed"); }       
+    });
+
+    document.querySelectorAll("#menu_list").forEach(anchor => {
+        anchor.ontransitionend = () => { anchor.classList.add("removed"); }       
+    });
+
+    document.querySelectorAll(".rsvp_button").forEach(button => {
+        button.onclick = () => { window.open("https://wa.me/+52#55#25#6#989#40".replaceAll("#","")); }
+    });
+
+    document.querySelectorAll(".contact_us").forEach(button => {
+        button.onclick = () => { window.open("https://wa.me/+52#55#25#6#989#40".replaceAll("#","")); }
     });
 </script>
 </html>
