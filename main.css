@@ -100,6 +100,10 @@ a, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
+.contact_us {
+    cursor: pointer;
+}
+
 section {
     padding: 2em;
     margin-top: 2em;
