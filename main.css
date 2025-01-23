@@ -469,6 +469,7 @@ div#arriving_content {}
 
 #timeline_right > div {
     display: inline-flex;
+    white-space: nowrap;
 }
 
 #timeline .material-symbols-outlined {
