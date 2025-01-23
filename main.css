@@ -24,8 +24,9 @@ body {
     font-size: 16pt;
     scroll-behavior: smooth;
     background-color: #fff9f2;
-    width: 100%;
-    color: #5c6244
+    max-width: 100%;
+    color: #5c6244;
+    overflow-x: hidden;
 }
 
 nav {
@@ -36,14 +37,22 @@ nav {
     background: #d8dfbe;
     text-align: right;
     font-family: 'alta';
-    font-size: 7vw;
+    font-size: 6vw;
     box-shadow: #5e634b -2px -1px 12px 0px;
     transition: background-color 0.5s;
-    width: 80vw;
+    width: 50vw;
+    padding-right: 0.5em;
 }
 
 #menu_button {
     cursor: pointer;
+    position: fixed;
+    right: 0.5em;
+    top: 0.5em;
+}
+
+#menu_list {
+    margin-top: 2em;
 }
 
 #menu_list.removed {
@@ -79,6 +88,13 @@ nav ul li {
     margin-bottom: 0.3em;
 }
 
+@media (orientation: landscape) {
+    nav{
+        font-size: 5vh;
+        width: 50%;
+    }
+}
+
 a, a:visited, a:hover, a:active {
     color: inherit;
     text-decoration: none;
@@ -86,10 +102,9 @@ a, a:visited, a:hover, a:active {
 
 section {
     padding: 2em;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     margin-top: 2em;
-    min-height: 70vh;
+    min-height: 50vh;
+    max-width: 100vw;
 }
 
 section+section::before {
@@ -138,6 +153,16 @@ h1 {
     margin-top: 0;
 }
 
+@media (orientation: landscape) {
+    h1 {
+        font-size: 25vh;
+    }
+    
+    #landing h2 {
+        font-size: 15vh;
+    }
+}
+
 #landing_container {
     background-image: url(./assets/img/land_bg_0.png);
     width: 100%;
@@ -156,7 +181,7 @@ h1 {
 #landing_confirmacion {
     background: #5c6244;
     border-radius: 2em;
-    padding: 1em 2em;
+    /* padding: 1em 2em; */
     color: #fff9f2;
     /* position: fixed; */
 }
@@ -168,6 +193,7 @@ h1 {
 #invitation p{
     text-align: justify;
 }
+
 
 #invitation h1{
     font-family: "alta", serif;
@@ -182,7 +208,23 @@ h1 {
     width: 50%;
 }
 
+#invitation_image {
+    width: calc(100% - 0.5em);
+    height: 300px;
+    margin: 0 auto;
+    background: url(./assets/img/land_bg_0.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 @media (orientation: landscape) {
+    #invitation h1 {
+        font-size: 8vh;
+        text-align: left;
+    }   
+    
+    #invitation_image { height: 500px; }
+
     #invitation_textcontainer {
         flex-direction: row;
     }
@@ -200,15 +242,6 @@ h1 {
     #invitation_textcontainer > div {
         width: 100%; 
     }
-}
-
-#invitation_image {
-    width: calc(100% - 0.5em);
-    height: 300px;
-    margin: 0 auto;
-    background: url(./assets/img/land_bg_0.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 #details {
@@ -251,8 +284,7 @@ h1 {
     margin: 1em 0;
 }
 
-#arriving {    
-    background-size:coger;
+#arriving {
     background-position:center;
 }
 
@@ -273,7 +305,10 @@ h1 {
     display: flex;
     text-align: center;
     justify-content: center;
+    margin-top: 1em;
 }
+
+div#arriving_content {}
 
 #arriving_content h2{
     font-size: 1em;
@@ -331,6 +366,18 @@ h1 {
 #lodging_content h3 {
     margin: 0;
     font-size: larger;
+}
+
+#lodging_content small {
+    font-size: smaller;
+}
+
+#lodging_content .small_letters {
+    font-size: x-small;
+}
+
+.lodging_contact, .lodging_contact .material-symbols-outlined {
+    font-size: 18px !important;
 }
 
 #lodging_content > div {
@@ -480,8 +527,7 @@ h1 {
 
 
 
-#kids {    
-    background-size:coger;
+#kids {
     background-position:center;
 }
 
@@ -556,6 +602,20 @@ h1 {
     width: 40%;
 }
 
+#gifts_image {
+    background: url(./assets/img/gifts_img_0.png);
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#rsvp {
+    background: url(./assets/img/details_bg_0.png);
+    background-size: cover;
+    background-position:center;
+}
+
 @media (orientation: portrait) {
     #gifts {
         flex-direction:column;
@@ -564,22 +624,18 @@ h1 {
         width: 100%;
     }
 
-#gifts_left h1 {
-    text-align: left;
-    font-size: 2em;
-}
-}
+    #gifts_left h1 {
+        text-align: left;
+        font-size: 2em;
+    }
 
-#gifts_image {
-    background: url(./assets/img/land_bg_0.jpg);
-    height: 300px;
-    background-size: cover;
-}
-
-#rsvp {
-    background: url(./assets/img/details_bg_0.png);
-    background-size: cover;
-    background-position:center;
+    #gifts_image {
+        background: url(./assets/img/gifts_img_0.png);
+        height: 400px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 #rsvp p {
@@ -620,7 +676,8 @@ h1 {
 }
 
 #thanks h1 {
-    font-size: 10vw;
+    font-size: 8vh;
+    text-align: left;
 }
 
 #thanks_content {
@@ -635,20 +692,29 @@ h1 {
     width: 50%;
 }
 
+#thanks_image {
+    background: url(./assets/img/thanks_img_0.jpg);
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
 @media (orientation: portrait) {
+    #thanks h1 {
+        font-size: 10vw;
+    }
+
     #thanks_content {
         flex-direction:column;
     }
     #thanks_content > div {
         width: 100%;
     }
+
+    #thanks_image {
+        background: url(./assets/img/thanks_img_0.jpg);
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+    }
 }
-
-#thanks_image {
-    background: url(./assets/img/thanks_img_0.jpg);
-    height: 300px;
-    background-size: cover;
-    background-position: bottom;
-}
-
-

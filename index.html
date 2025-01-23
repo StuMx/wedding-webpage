@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Monsieur+La+Doulaise&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=airport_shuttle,bedroom_baby,brunch_dining,calendar_month,candle,directions_bus,directions_car,emoji_people,help,location_city,menu,pin_drop,question_mark,styler,wine_bar" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=airport_shuttle,bedroom_baby,brunch_dining,calendar_month,call,church,directions_bus,directions_car,emoji_people,help,location_city,menu,pin_drop,question_mark,styler,wine_bar" />
     
 </head>
 <body>
@@ -120,15 +120,39 @@
         <div id="lodging_head"><h1>Hotel y transporte</h1></div>
         <div id="lodging_content">
             <div>
+                <span class="material-symbols-outlined">location_city</span>
                 <h2>HOTEL SEDE</h2>
                 <h3>Hilton Angelopolis</h3><br />
-                <span class="material-symbols-outlined">location_city</span>
-                <p>
-                    Habitación estándar 2pax 
-                    <b>$1590*</b><br />
-                    <small>*desayuno buffet incluido</small><br />
-                    Código Reservación: <br>
-                    XXXX
+                
+                <div style="display: flex;">
+                    <div style="width: 50%;">
+                        Habitación Estándar Sencilla
+                        <b>$1380*</b>
+                    </div>
+                    <div style="width: 50%;">
+                        Habitación Estándar Doble <br>
+                        <b>$1590**</b>
+                    </div>
+                </div>
+                <div>
+                    <small>Código Reservación:</small> <br>
+                    <b>BODBYD</b> <br> 
+                    <a href="tel:2226908001">
+                        <span class="lodging_contact">
+                            <span class="material-symbols-outlined">call</span>
+                            222 690 8001
+                        </span><br>
+                    </a>
+                    <a href="tel:2215834150">
+                        <span class="lodging_contact">
+                            <span class="material-symbols-outlined">call</span>
+                            221 583 4150
+                        </span>
+                    </a>
+                </div>
+                <p class="small_letters">
+                    <small>* Incluye 1 desayuno buffet. No incluye impuestos.</small><br />
+                    <small>** Incluye 2 desayuno buffet. No incluye impuestos.</small><br />
                 </p>
             </div>
             <div>
@@ -172,7 +196,7 @@
                         </div>
                     </div>
                     <div>
-                        <span class="material-symbols-outlined">candle</span>
+                        <span class="material-symbols-outlined">church</span>
                         <div>
                             <h3>CEREMONIA</h3>
                             <p>Sábado 3:00 pm</p>
@@ -281,7 +305,7 @@
     });
 
     document.querySelectorAll(".rsvp_button").forEach(button => {
-        button.onclick = () => { window.open("https://wa.me/+52#55#25#6#989#40?text=%2AFavor%20de%20confirmar%20con%20los%20siguientes%20datos%3A%2A%0ANombre%3A%0AAsistencia%20%28Si%2FNo%29%3A%20%0AMe%20hospedare%20hotel%20%28Si%2FNo%29%3A%0ARequiero%20transporte%20%28Si%2FNo%29%3A%0ALlegar%C3%A9%20el%20d%C3%ADa%3A%20%0ALlevare%20ni%C3%B1os%20menores%20a%2010%20a%C3%B1os%20%28%C2%BFCuantos%3F%29%3A".replaceAll("#","")); }
+        button.onclick = () => { window.open("https://wa.me/+522214193299?text=%2AFavor%20de%20confirmar%20con%20los%20siguientes%20datos%3A%2A%0ANombre%3A%0AAsistencia%20%28Si%2FNo%29%3A%20%0AMe%20hospedare%20hotel%20%28Si%2FNo%29%3A%0ARequiero%20transporte%20%28Si%2FNo%29%3A%0ARestricciones%20alimenticias%20%28%C2%BFCuales%3F%29%3A%0ALlegar%C3%A9%20el%20d%C3%ADa%3A%20%0ALlevare%20ni%C3%B1os%20menores%20a%2010%20a%C3%B1os%20%28%C2%BFCuantos%3F%29%3A".replaceAll("#","")); }
     });
 
     document.querySelectorAll(".contact_us").forEach(button => {
