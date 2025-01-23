@@ -133,7 +133,6 @@ section+section::before {
 
 #landing {
     display: block;
-    
     height: 90vh;
 }
 
@@ -406,6 +405,10 @@ div#arriving_content {}
         margin: -5%;
         height: 100vw;
     }
+    
+    #lodging_content > div:nth-child(2) {
+        height: 75vw;
+    }
 }
 
 #lodging_footer {
@@ -482,10 +485,19 @@ div#arriving_content {}
     margin: -2px calc(2em - 0.25em);
 }
 
+.timeline_label {
+    min-height: 4em;
+}
+
+.timeline_spacer {
+    width: 0.5em;
+    height: 4em;
+}
+
 @media (orientation: landscape) {
     #timeline_content {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         font-size: 10pt;
         margin: 0;
         width: 99%;
