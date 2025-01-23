@@ -40,7 +40,7 @@ nav {
     font-size: 6vw;
     box-shadow: #5e634b -2px -1px 12px 0px;
     transition: background-color 0.5s;
-    width: 50vw;
+    width: 70vw;
     padding-right: 0.5em;
 }
 
@@ -181,7 +181,7 @@ h1 {
 #landing_confirmacion {
     background: #5c6244;
     border-radius: 2em;
-    /* padding: 1em 2em; */
+    padding: 1em 2em;
     color: #fff9f2;
     /* position: fixed; */
 }
