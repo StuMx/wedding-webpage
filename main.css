@@ -541,7 +541,45 @@ div#arriving_content {}
 }
 
 
+#icebreaker {
+    background: url(./assets/img/details_bg_0.png);
+    background-position:center;
+    background-repeat: no-repeat;
+}
 
+#icebreaker_head {
+    text-align: center;
+}
+
+#icebreaker_head h1 {
+    font-size: 11vw;
+}
+
+#icebreaker_content {
+    display: flex;
+    text-align: center;
+}
+
+#icebreaker_content > div {
+    width: 33%;
+    /* height: 200px; */
+}
+
+@media (orientation: portrait) {
+    #icebreaker_content {
+        flex-direction:column;
+    }
+    #icebreaker_content > div {
+        width: 100%;
+    }
+}
+
+#icebreaker_footer {
+    /* font-family: "Imperial Script", serif; */
+    text-align: center;
+    font-size: 0.6em;
+    margin: 1em 0;
+}
 
 
 #kids {
